@@ -18,6 +18,11 @@ if (currentPage === '/login') {
     loginLink.classList.remove('active');
     lineregister.classList.remove('active');
     linerlogin.classList.add('active');
+}else if (currentPage === '/registerprofesional') {
+    registerLink.classList.add('active');
+    loginLink.classList.remove('active');
+    lineregister.classList.remove('active');
+    linerlogin.classList.add('active');
 }
 
 
