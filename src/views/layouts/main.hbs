@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOGIN</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/navegacion.css">
+
+    <script src="../js/cambiocolornavegacion.js" defer></script>
+
+
+</head>
+
+<body class="bg-white">
+
+    <nav class="flex pt-20 pb-12 bg-white text-white px-24">
+        <div class="flex space-x-4 bg-gray-200 rounded-full p-5">
+            <h1 class="text-base py-1 px-5 font-bold text-black">Inicio</h1>
+            <h1 class="text-base py-1 px-5 font-bold text-black">Acerca</h1>
+            <h1 class="text-base py-1 px-5 font-bold text-black">Funcionalidades</h1>
+            <h1 class="text-base py-1 px-5 font-bold text-black">Paginas</h1>
+            <h1 class="text-base py-1 px-5 font-bold text-black">Comunidad</h1>
+        </div>
+
+
+
+        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+            {{#if name}}
+            <li class="nav-item px-4">
+                <p class="font-semibold">{{name}}</p>
+            </li>
+
+            <li class="nav-item px-4"><a href="/logout"
+                    class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-green-700 py-3 px-4 rounded-md">Log
+                    Out</a>
+            </li>
+            {{else}}
+            <li class=" px-4">
+                <a href="/login" id="loginLink"
+                    class="nav-link font-semibold py-3 px-4 rounded-md relative text-red-600 hover:text-white hover:bg-red-600">
+                    Login
+                    
+                </a>
+                <div id="linelogin"></div>
+            </li>
+            <li class="nav-item px-4">
+                <a href="/register" id="registerLink"
+                    class="nav-link font-semibold py-3 px-4 rounded-md relative text-red-600 hover:text-white hover:bg-red-600">
+                    Register
+                    
+                </a>
+                <div id="lineregister"></div>
+            </li>
+
+
+            {{/if}}
+        </ul>
+
+    </nav>
+
+    {{{body}}}
+
+</body>
+
+</html>
